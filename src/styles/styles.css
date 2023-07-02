@@ -1,1 +1,39 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  list-style-type: none;
+}
+
+body {
+  background-color: #0b0303;
+  color: #fff;
+}
+
+.nav-bar nav {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.nav-bar nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.nav-bar nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+.nav-bar nav ul li:hover {
+  color: #c27783;
+}
+.nav-bar nav ul li i {
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 5px;
+}/*# sourceMappingURL=styles.css.map */

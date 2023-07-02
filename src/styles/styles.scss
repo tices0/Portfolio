@@ -1,0 +1,64 @@
+$black: #0b0303;
+$grey: #5a5252;
+$dark-red: #5a0a0a;
+$medium-red: #9d0203;
+$light-red: #d73e3f;
+$dark-pink: #c27783;
+$light-pink: #e4a3a3;
+$beige: #f9e3e2;
+
+@mixin flexCenter($direction) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Poppins, sans-serif;
+	list-style-type: none;
+}
+
+body {
+	background-color: $black;
+	color: #fff;
+}
+
+// =============
+// Nav Bar
+// =============
+
+.nav-bar nav {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+
+	ul {
+		@include flexCenter(row);
+		gap: 2rem;
+
+		li {
+			cursor: pointer;
+			position: relative;
+
+			&:hover {
+				color: $dark-pink;
+			}
+
+			i {
+				position: absolute;
+				top: -0.5rem;
+				left: 50%;
+				transform: translate(-50%);
+				font-size: 5px;
+			}
+		}
+	}
+}
+
+// =============
+//
+// =============
