@@ -28,7 +28,7 @@ body {
 }
 
 // =============
-// Nav Bar
+// Navigation
 // =============
 
 .nav-bar nav {
@@ -45,7 +45,7 @@ body {
 			position: relative;
 
 			&:hover {
-				color: $dark-pink;
+				color: $light-red;
 			}
 
 			i {
@@ -56,6 +56,81 @@ body {
 				font-size: 5px;
 			}
 		}
+	}
+}
+
+// =============
+// Pages
+// =============
+
+.pages {
+	height: 100vh;
+	width: 100vw;
+}
+
+// =============
+// Home Page
+// =============
+
+#home-page {
+	.fa-circle {
+		position: absolute;
+		color: $medium-red;
+		top: 50%;
+		left: 50%;
+		font-size: 400px;
+		// border-width: 2px;
+		// border-style: solid;
+		animation: spin 4s linear infinite;
+		// border-color: transparent $beige;
+		border-radius: 50%;
+
+		&::after {
+			content: "";
+			background: linear-gradient(60deg, $beige, $light-red);
+			position: absolute;
+			top: -3px;
+			left: -3px;
+			right: -3px;
+			bottom: -3px;
+			// height: 100%;
+			// width: 100%;
+			border-radius: 50%;
+			z-index: -1;
+		}
+	}
+
+	.scroll-down {
+		@include flexCenter(row);
+		gap: 1rem;
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		text-align: right;
+
+		h1 {
+			font-size: 14px;
+		}
+
+		p {
+			color: $grey;
+			font-size: 12px;
+		}
+
+		i {
+			color: $light-red;
+            font-size: 24px;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
 
