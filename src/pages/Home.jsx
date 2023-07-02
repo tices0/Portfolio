@@ -4,6 +4,7 @@ function Home() {
 	return (
 		<main className="pages" id="home-page">
 			<i className="fa-solid fa-circle"></i>
+			<div className="second-outline"></div>
 			<div className="scroll-down">
 				<div className="text">
 					<h1>scroll down</h1>

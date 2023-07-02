@@ -25,6 +25,7 @@ $beige: #f9e3e2;
 body {
 	background-color: $black;
 	color: #fff;
+	overflow: hidden;
 }
 
 // =============
@@ -100,6 +101,19 @@ body {
 		}
 	}
 
+	.second-outline {
+		width: 90vw;
+		height: 150vh;
+		border: 2px solid $grey;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		border-radius: 50%;
+		opacity: 0.2;
+	}
+
 	.scroll-down {
 		@include flexCenter(row);
 		gap: 1rem;
@@ -119,7 +133,7 @@ body {
 
 		i {
 			color: $light-red;
-            font-size: 24px;
+			font-size: 24px;
 		}
 	}
 }
