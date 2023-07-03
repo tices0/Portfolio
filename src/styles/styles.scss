@@ -25,7 +25,13 @@ $beige: #f9e3e2;
 body {
 	background-color: $black;
 	color: #fff;
-	overflow: hidden;
+	// overflow: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 // =============
@@ -76,28 +82,35 @@ body {
 #home-page {
 	.fa-circle {
 		position: absolute;
-		color: $medium-red;
 		top: 50%;
 		left: 50%;
 		font-size: 400px;
-		// border-width: 2px;
-		// border-style: solid;
 		animation: spin 4s linear infinite;
-		// border-color: transparent $beige;
 		border-radius: 50%;
-
-		&::after {
+		background: -webkit-linear-gradient(
+			60deg,
+			$medium-red 50%,
+			$light-red,
+			$beige,
+			$medium-red
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		border-radius: 50%;
+		z-index: -1;
+		position: relative;
+		&:after {
 			content: "";
-			background: linear-gradient(60deg, $beige, $light-red);
 			position: absolute;
-			top: -3px;
-			left: -3px;
-			right: -3px;
-			bottom: -3px;
-			// height: 100%;
-			// width: 100%;
+			top: 2px;
+			left: 2px;
+			bottom: 2px;
+			right: 2px;
+			background-color: $medium-red;
 			border-radius: 50%;
-			z-index: -1;
+			z-index: 999;
+			border-inline: 5px solid rgba(0, 231, 0, 0.02);
 		}
 	}
 
