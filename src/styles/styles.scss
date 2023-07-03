@@ -14,6 +14,13 @@ $beige: #f9e3e2;
 	flex-direction: $direction;
 }
 
+@mixin absoluteCenter() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -118,10 +125,7 @@ body {
 		width: 525px;
 		height: 525px;
 		background-color: transparent;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absoluteCenter();
 
 		svg {
 			position: absolute;
@@ -135,10 +139,7 @@ body {
 		width: 90vw;
 		height: 150vh;
 		border: 2px solid $grey;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absoluteCenter();
 		z-index: -1;
 		border-radius: 50%;
 		opacity: 0.2;
@@ -153,17 +154,93 @@ body {
 		text-align: right;
 
 		h1 {
-			font-size: 14px;
+			font-size: 13px;
 		}
 
 		p {
 			color: $grey;
-			font-size: 12px;
+			font-size: 11px;
 		}
 
 		i {
 			color: $light-red;
 			font-size: 24px;
+		}
+	}
+
+	section.info {
+		@include absoluteCenter();
+		width: 100vw;
+		height: 100vh;
+		padding: 3rem;
+		padding-left: 6rem;
+		@include flexCenter(row);
+		justify-content: space-between;
+
+		ul {
+			@include flexCenter(column);
+			justify-content: space-between;
+			align-items: flex-end;
+			gap: 2rem;
+			width: 200px;
+
+			p {
+				color: $grey;
+			}
+
+			&.left {
+				li {
+					transform: rotate(-90deg);
+				}
+
+				b {
+					color: #fff;
+				}
+			}
+
+			&.right {
+				text-align: center;
+				// text-align: right;
+
+				li {
+					border-right: 2px solid $medium-red;
+					padding-right: 1rem;
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						right: -2px;
+                        top:0;
+						background-color: #fff;
+						height: 1.5rem;
+						width: 2px;
+						animation: lineMovement 10s infinite;
+						border-radius: 2px;
+					}
+
+					&.second::after {
+						animation-delay: 500ms;
+					}
+
+					&.third::after {
+						animation-delay: 1s;
+					}
+				}
+
+				i {
+					font-size: 30px;
+					padding-bottom: 0.5rem;
+				}
+
+				h1 {
+					font-size: 15px;
+				}
+
+				p {
+					font-size: 13px;
+				}
+			}
 		}
 	}
 }
@@ -181,6 +258,16 @@ body {
 @keyframes arcRotation {
 	100% {
 		rotate: 360deg;
+	}
+}
+
+@keyframes lineMovement {
+	0%,
+	100% {
+		top: 0;
+	}
+	50% {
+		top: calc(100% - 1rem);
 	}
 }
 

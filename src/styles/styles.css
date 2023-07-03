@@ -114,15 +114,84 @@ body::-webkit-scrollbar {
   text-align: right;
 }
 #home-page .scroll-down h1 {
-  font-size: 14px;
+  font-size: 13px;
 }
 #home-page .scroll-down p {
   color: #5a5252;
-  font-size: 12px;
+  font-size: 11px;
 }
 #home-page .scroll-down i {
   color: #d73e3f;
   font-size: 24px;
+}
+#home-page section.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+  padding-left: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#home-page section.info ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  width: 200px;
+}
+#home-page section.info ul p {
+  color: #5a5252;
+}
+#home-page section.info ul.left li {
+  transform: rotate(-90deg);
+}
+#home-page section.info ul.left b {
+  color: #fff;
+}
+#home-page section.info ul.right {
+  text-align: center;
+}
+#home-page section.info ul.right li {
+  border-right: 2px solid #9d0203;
+  padding-right: 1rem;
+  position: relative;
+}
+#home-page section.info ul.right li::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 0;
+  background-color: #fff;
+  height: 1.5rem;
+  width: 2px;
+  animation: lineMovement 10s infinite;
+  border-radius: 2px;
+}
+#home-page section.info ul.right li.second::after {
+  animation-delay: 500ms;
+}
+#home-page section.info ul.right li.third::after {
+  animation-delay: 1s;
+}
+#home-page section.info ul.right i {
+  font-size: 30px;
+  padding-bottom: 0.5rem;
+}
+#home-page section.info ul.right h1 {
+  font-size: 15px;
+}
+#home-page section.info ul.right p {
+  font-size: 13px;
 }
 
 @keyframes spin {
@@ -136,5 +205,13 @@ body::-webkit-scrollbar {
 @keyframes arcRotation {
   100% {
     rotate: 360deg;
+  }
+}
+@keyframes lineMovement {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 1rem);
   }
 }/*# sourceMappingURL=styles.css.map */

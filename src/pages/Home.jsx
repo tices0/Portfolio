@@ -20,6 +20,51 @@ function Home() {
 				</div>
 				<i className="fa-solid fa-arrow-pointer"></i>
 			</div>
+
+			<section className="info">
+				<ul className="left">
+					<li>
+						<h1>React JS</h1>
+						<p>
+							<b>This website</b> was made using React JS.
+						</p>
+					</li>
+					<li>
+						<h1>SCSS</h1>
+						<p>
+							<b>This website</b> was made solely using SCSS for
+							styling.
+						</p>
+					</li>
+					<li>
+						<h1>Python Django</h1>
+						<p>
+							Learnt through{" "}
+							<b>
+								Harvard's CS50 Introduction to Web Programming
+								with Python and JavaScript
+							</b>
+						</p>
+					</li>
+				</ul>
+				<ul className="right">
+					<li className="first">
+						<i className="fa-solid fa-paintbrush"></i>
+						<h1>Figma</h1>
+						<p>Exact copy of design</p>
+					</li>
+					<li className="second">
+						<i className="fa-solid fa-plus"></i>
+						<h1>Bootstrap</h1>
+						<p>Easy intergration</p>
+					</li>
+					<li className="third">
+						<i class="fa-solid fa-clock"></i>
+						<h1>Tailwind</h1>
+						<p>Quick completion</p>
+					</li>
+				</ul>
+			</section>
 		</main>
 	);
 }
