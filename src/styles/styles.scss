@@ -84,7 +84,7 @@ body {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		font-size: 400px;
+		font-size: 375px;
 		animation: spin 4s linear infinite;
 		border-radius: 50%;
 		background: -webkit-linear-gradient(
@@ -111,6 +111,23 @@ body {
 			border-radius: 50%;
 			z-index: 999;
 			border-inline: 5px solid rgba(0, 231, 0, 0.02);
+		}
+	}
+
+	.first-outline {
+		width: 525px;
+		height: 525px;
+		background-color: transparent;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		svg {
+			position: absolute;
+			animation: arcRotation 10s linear infinite;
+			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -158,6 +175,12 @@ body {
 
 	100% {
 		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes arcRotation {
+	100% {
+		rotate: 360deg;
 	}
 }
 
