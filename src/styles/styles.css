@@ -96,12 +96,12 @@ body::-webkit-scrollbar {
 }
 #home-page .name-container h2 {
   font-size: 20px;
-  color: #e4a3a3;
+  color: #c27783;
 }
 #home-page .name-container .line {
   width: 3rem;
   height: 2px;
-  background-color: #5a0a0a;
+  background-color: #e4a3a3;
 }
 #home-page .first-outline {
   width: 550px;
