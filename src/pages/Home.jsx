@@ -28,7 +28,7 @@ function Home() {
 						<div className="rotated-text">
 							<h1>React</h1>
 							<p>
-								<i>This website</i> was made using React JS
+								<i>This website</i> was made solely using React JS
 							</p>
 						</div>
 					</li>
@@ -36,8 +36,7 @@ function Home() {
 						<div className="rotated-text middle">
 							<h1>SCSS</h1>
 							<p>
-								<i>This website</i> was made solely using SCSS
-								for styling
+								<i>This website</i> was styled only using SCSS
 							</p>
 						</div>
 					</li>
@@ -69,6 +68,10 @@ function Home() {
 					</li>
 				</ul>
 			</section>
+			<div className="made-by">
+				<i class="fa-solid fa-copyright"></i> 2023, made entirely by
+				Tochi Davids
+			</div>
 		</main>
 	);
 }

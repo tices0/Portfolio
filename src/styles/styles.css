@@ -18,8 +18,8 @@ body::-webkit-scrollbar {
 
 .nav-bar nav {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 3rem;
+  right: 3rem;
 }
 .nav-bar nav ul {
   display: flex;
@@ -52,6 +52,7 @@ body::-webkit-scrollbar {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 375px;
   animation: spin 4s linear infinite;
   border-radius: 50%;
@@ -77,17 +78,17 @@ body::-webkit-scrollbar {
 }
 #home-page #name {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
 }
 #home-page .first-outline {
-  width: 525px;
-  height: 525px;
+  width: 550px;
+  height: 550px;
   background-color: transparent;
   position: absolute;
   top: 50%;
@@ -119,8 +120,8 @@ body::-webkit-scrollbar {
   flex-direction: row;
   gap: 1rem;
   position: absolute;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 3rem;
   text-align: right;
 }
 #home-page .scroll-down h1 {
@@ -141,8 +142,8 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
-  padding: 3rem;
-  padding-left: 6rem;
+  padding: 6rem;
+  padding-left: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +178,7 @@ body::-webkit-scrollbar {
   background-color: #d73e3f;
 }
 #home-page section.info ul.left li {
-  width: 150px;
+  width: 125px;
 }
 #home-page section.info ul.left i {
   color: #fff;
@@ -221,6 +222,14 @@ body::-webkit-scrollbar {
 }
 #home-page section.info ul.right h1 {
   font-size: 15px;
+}
+#home-page .made-by {
+  font-size: 10px;
+  position: absolute;
+  left: -2.1rem;
+  top: 50%;
+  transform: translate(0, -50%) rotate(-90deg);
+  color: #5a5252;
 }
 
 @keyframes spin {
