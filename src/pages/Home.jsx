@@ -24,27 +24,30 @@ function Home() {
 			<section className="info">
 				<ul className="left">
 					<li>
-						<h1>React JS</h1>
-						<p>
-							<b>This website</b> was made using React JS.
-						</p>
+						<div className="rotated-text">
+							<h1>React</h1>
+							<p>
+								<i>This website</i> was made using React JS
+							</p>
+						</div>
 					</li>
 					<li>
-						<h1>SCSS</h1>
-						<p>
-							<b>This website</b> was made solely using SCSS for
-							styling.
-						</p>
+						<div className="rotated-text middle">
+							<h1>SCSS</h1>
+							<p>
+								<i>This website</i> was made solely using SCSS
+								for styling
+							</p>
+						</div>
 					</li>
 					<li>
-						<h1>Python Django</h1>
-						<p>
-							Learnt through{" "}
-							<b>
-								Harvard's CS50 Introduction to Web Programming
-								with Python and JavaScript
-							</b>
-						</p>
+						<div className="rotated-text">
+							<h1>Django</h1>
+							<p>
+								Learnt through{" "}
+								<i>Harvard's CS50 Web Programming Course</i>
+							</p>
+						</div>
 					</li>
 				</ul>
 				<ul className="right">
@@ -56,12 +59,12 @@ function Home() {
 					<li className="second">
 						<i className="fa-solid fa-plus"></i>
 						<h1>Bootstrap</h1>
-						<p>Easy intergration</p>
+						<p>Easily intergrated</p>
 					</li>
 					<li className="third">
 						<i class="fa-solid fa-clock"></i>
 						<h1>Tailwind</h1>
-						<p>Quick completion</p>
+						<p>For quick completion</p>
 					</li>
 				</ul>
 			</section>

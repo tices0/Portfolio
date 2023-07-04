@@ -107,6 +107,8 @@ body {
 		border-radius: 50%;
 		z-index: -1;
 		position: relative;
+        
+
 		&:after {
 			content: "";
 			position: absolute;
@@ -118,6 +120,15 @@ body {
 			border-radius: 50%;
 			z-index: 999;
 			border-inline: 5px solid rgba(0, 231, 0, 0.02);
+            box-shadow:
+    inset 0 0 50px $medium-red,      /* inner white */
+    inset 20px 0 80px $light-red,   /* inner left magenta short */
+    inset -20px 0 80px $dark-red,  /* inner right cyan short */
+    inset 20px 0 300px $light-red, /* inner left magenta broad */
+    inset -20px 0 300px $dark-red, /* inner right cyan broad */
+    0 0 50px $medium-red,            /* outer white */
+    -10px 0 80px $light-red,       /* outer left magenta */
+    10px 0 80px $dark-red;         /* outer right cyan */
 		}
 	}
 
@@ -179,28 +190,53 @@ body {
 
 		ul {
 			@include flexCenter(column);
-			justify-content: space-between;
-			align-items: flex-end;
-			gap: 2rem;
-			width: 200px;
+			gap: 3rem;
+			// min-height: calc(100vh - 10rem);
 
 			p {
 				color: $grey;
+				font-size: 13px;
 			}
 
 			&.left {
-				li {
+				gap: 5rem;
+				align-items: flex-start;
+
+				.rotated-text {
 					transform: rotate(-90deg);
+					// transform-origin: 0 100%;
+
+					&.middle::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: -0.5rem;
+						width: 2rem;
+						height: 2px;
+						background-color: $light-red;
+					}
 				}
 
-				b {
+				li {
+					width: 150px;
+				}
+
+				i {
+					color: #fff;
+					font-style: normal;
+				}
+
+				h1 {
+					font-size: 16px;
+					margin-bottom: 0.5rem;
 					color: #fff;
 				}
 			}
 
 			&.right {
+				align-items: flex-end;
 				text-align: center;
-				// text-align: right;
+				width: 200px;
 
 				li {
 					border-right: 2px solid $medium-red;
@@ -211,7 +247,7 @@ body {
 						content: "";
 						position: absolute;
 						right: -2px;
-                        top:0;
+						top: 0;
 						background-color: #fff;
 						height: 1.5rem;
 						width: 2px;
@@ -235,10 +271,6 @@ body {
 
 				h1 {
 					font-size: 15px;
-				}
-
-				p {
-					font-size: 13px;
 				}
 			}
 		}

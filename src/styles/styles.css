@@ -74,6 +74,7 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   z-index: 999;
   border-inline: 5px solid rgba(0, 231, 0, 0.02);
+  box-shadow: inset 0 0 50px #9d0203, inset 20px 0 80px #d73e3f, inset -20px 0 80px #5a0a0a, inset 20px 0 300px #d73e3f, inset -20px 0 300px #5a0a0a, 0 0 50px #9d0203, -10px 0 80px #d73e3f, 10px 0 80px #5a0a0a; /* outer right cyan */
 }
 #home-page .first-outline {
   width: 525px;
@@ -144,22 +145,44 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 2rem;
-  width: 200px;
+  gap: 3rem;
 }
 #home-page section.info ul p {
   color: #5a5252;
+  font-size: 13px;
 }
-#home-page section.info ul.left li {
+#home-page section.info ul.left {
+  gap: 5rem;
+  align-items: flex-start;
+}
+#home-page section.info ul.left .rotated-text {
   transform: rotate(-90deg);
 }
-#home-page section.info ul.left b {
+#home-page section.info ul.left .rotated-text.middle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  width: 2rem;
+  height: 2px;
+  background-color: #d73e3f;
+}
+#home-page section.info ul.left li {
+  width: 150px;
+}
+#home-page section.info ul.left i {
+  color: #fff;
+  font-style: normal;
+}
+#home-page section.info ul.left h1 {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
   color: #fff;
 }
 #home-page section.info ul.right {
+  align-items: flex-end;
   text-align: center;
+  width: 200px;
 }
 #home-page section.info ul.right li {
   border-right: 2px solid #9d0203;
@@ -189,9 +212,6 @@ body::-webkit-scrollbar {
 }
 #home-page section.info ul.right h1 {
   font-size: 15px;
-}
-#home-page section.info ul.right p {
-  font-size: 13px;
 }
 
 @keyframes spin {
