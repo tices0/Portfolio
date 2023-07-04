@@ -106,8 +106,6 @@ body {
 		background-clip: text;
 		border-radius: 50%;
 		z-index: -1;
-		position: relative;
-        
 
 		&:after {
 			content: "";
@@ -120,16 +118,19 @@ body {
 			border-radius: 50%;
 			z-index: 999;
 			border-inline: 5px solid rgba(0, 231, 0, 0.02);
-            box-shadow:
-    inset 0 0 50px $medium-red,      /* inner white */
-    inset 20px 0 80px $light-red,   /* inner left magenta short */
-    inset -20px 0 80px $dark-red,  /* inner right cyan short */
-    inset 20px 0 300px $light-red, /* inner left magenta broad */
-    inset -20px 0 300px $dark-red, /* inner right cyan broad */
-    0 0 50px $medium-red,            /* outer white */
-    -10px 0 80px $light-red,       /* outer left magenta */
-    10px 0 80px $dark-red;         /* outer right cyan */
+			box-shadow: inset 0 0 50px $medium-red, inset 20px 0 80px $light-red,
+				inset -20px 0 80px $dark-red, inset 20px 0 300px $light-red,
+				inset -20px 0 300px $dark-red, 0 0 50px $medium-red,
+				-10px 0 80px $light-red, 10px 0 80px $dark-red;
 		}
+	}
+
+	#name {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		@include absoluteCenter();
+		font-size: 20px;
+        font-weight: 500;
 	}
 
 	.first-outline {
@@ -239,7 +240,7 @@ body {
 				width: 200px;
 
 				li {
-					border-right: 2px solid $medium-red;
+					border-right: 2px solid $light-red;
 					padding-right: 1rem;
 					position: relative;
 

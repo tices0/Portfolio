@@ -8,6 +8,7 @@ function Home() {
 		<main className="pages" id="home-page">
 			<GradientSvg />
 			<i className="fa-solid fa-circle"></i>
+			<h1 id="name">tochi davids</h1>
 			<div className="first-outline">
 				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />
 				<Svg2 d={describeArc(0.5, 0.5, 0.48, 180 - 15, 180 + 15)} />

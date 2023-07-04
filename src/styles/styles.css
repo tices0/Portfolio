@@ -61,7 +61,6 @@ body::-webkit-scrollbar {
   background-clip: text;
   border-radius: 50%;
   z-index: -1;
-  position: relative;
 }
 #home-page .fa-circle:after {
   content: "";
@@ -74,7 +73,17 @@ body::-webkit-scrollbar {
   border-radius: 50%;
   z-index: 999;
   border-inline: 5px solid rgba(0, 231, 0, 0.02);
-  box-shadow: inset 0 0 50px #9d0203, inset 20px 0 80px #d73e3f, inset -20px 0 80px #5a0a0a, inset 20px 0 300px #d73e3f, inset -20px 0 300px #5a0a0a, 0 0 50px #9d0203, -10px 0 80px #d73e3f, 10px 0 80px #5a0a0a; /* outer right cyan */
+  box-shadow: inset 0 0 50px #9d0203, inset 20px 0 80px #d73e3f, inset -20px 0 80px #5a0a0a, inset 20px 0 300px #d73e3f, inset -20px 0 300px #5a0a0a, 0 0 50px #9d0203, -10px 0 80px #d73e3f, 10px 0 80px #5a0a0a;
+}
+#home-page #name {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 500;
 }
 #home-page .first-outline {
   width: 525px;
@@ -185,7 +194,7 @@ body::-webkit-scrollbar {
   width: 200px;
 }
 #home-page section.info ul.right li {
-  border-right: 2px solid #9d0203;
+  border-right: 2px solid #d73e3f;
   padding-right: 1rem;
   position: relative;
 }
