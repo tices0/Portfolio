@@ -8,7 +8,12 @@ function Home() {
 		<main className="pages" id="home-page">
 			<GradientSvg />
 			<i className="fa-solid fa-circle"></i>
-			<h1 id="name">tochi davids</h1>
+
+			<div className="name-container">
+				<h1 id="name">tochi davids</h1>
+				<div className="line"></div>
+				<h2>frontend web developer</h2>
+			</div>
 			<div className="first-outline">
 				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />
 				<Svg2 d={describeArc(0.5, 0.5, 0.48, 180 - 15, 180 + 15)} />
@@ -28,7 +33,8 @@ function Home() {
 						<div className="rotated-text">
 							<h1>React</h1>
 							<p>
-								<i>This website</i> was made solely using React JS
+								<i>This website</i> was made solely using React
+								JS
 							</p>
 						</div>
 					</li>
