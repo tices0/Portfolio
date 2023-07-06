@@ -1,23 +1,22 @@
 import React from "react";
-import { describeArc } from "..";
-import { ReactComponent as GradientSvg } from "../components/svgGradient.svg";
-import { Svg1, Svg2 } from "../components/Svgs";
+// import { describeArc } from "..";
+// import { ReactComponent as GradientSvg } from "../components/svgGradient.svg";
+// import { Svg1, Svg2 } from "../components/Svgs";
 
 function Home() {
 	return (
 		<main className="pages" id="home-page">
-			<GradientSvg />
-			<i className="fa-solid fa-circle"></i>
+			{/* <GradientSvg /> */}
+			{/* <i className="fa-solid fa-circle"></i> */}
 
-			<div className="name-container">
-				<h1 id="name">tochi davids</h1>
-				<div className="line"></div>
-				<h2>frontend web developer</h2>
-			</div>
-			<div className="first-outline">
+			<p className="intro-">
+				Hey, my name is Tochi Davids and I am a frontend web developer,
+				who utilises React JS and SCSS.
+			</p>
+			{/* <div className="first-outline">
 				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />
 				<Svg2 d={describeArc(0.5, 0.5, 0.48, 180 - 15, 180 + 15)} />
-			</div>
+			</div> */}
 			<div className="second-outline"></div>
 			<div className="scroll-down">
 				<div className="text">
@@ -42,7 +41,7 @@ function Home() {
 						<div className="rotated-text middle">
 							<h1>SCSS</h1>
 							<p>
-								<i>This website</i> was styled only using SCSS
+								<i>This website</i> was styled using SCSS
 							</p>
 						</div>
 					</li>
