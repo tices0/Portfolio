@@ -17,18 +17,18 @@ function Slideshow() {
 
 	const transitionEnd = () => {
 		if (slidesRef.current[counter].id === "lastClone") {
-			slideContainer.style.transition = "none";
+			slideContainer.current.style.transition = "none";
 			setCounter(slidesRef.current.length - 2);
-			slideContainer.current.style.transform =
-				"translateX(" + -size * counter + "px)";
+			// slideContainer.current.style.transform =
+			// 	"translateX(" + -size * counter + "px)";
 			console.log("on last clone");
 		}
 
 		if (slidesRef.current[counter].id === "firstClone") {
-			slideContainer.style.transition = "none";
+			slideContainer.current.style.transition = "none";
 			setCounter(slidesRef.current.length - counter);
-			slideContainer.current.style.transform =
-				"translateX(" + -size * counter + "px)";
+			// slideContainer.current.style.transform =
+			// 	"translateX(" + -size * counter + "px)";
 			console.log("on first clone");
 		}
 	};
