@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { projectLinks } from "..";
 
-function Slideshow() {
-	const slidesRef = useRef([]);
+function Slideshow({setProject}) {
+    const slidesRef = useRef([]);
 	const slideContainer = useRef();
-
-	const [counter, setCounter] = useState(1);
+    
+    const [counter, setCounter] = useState(1);
 	const [size, setSize] = useState(0);
 
 	useEffect(() => {
@@ -42,6 +42,9 @@ function Slideshow() {
 	useEffect(() => {
 		slideContainer.current.style.transform =
 			"translateX(" + -size * counter + "px)";
+        if (counter === 0) setProject(2)
+        else if (counter === 4) setProject(0)
+        else setProject(counter - 1)
 		// eslint-disable-next-line
 	}, [counter]);
 

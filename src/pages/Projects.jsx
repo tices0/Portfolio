@@ -3,32 +3,25 @@ import Slideshow from "../components/Slideshow";
 import { projectLinks } from "..";
 
 function Projects() {
-	const [page, setPage] = useState(0);
+	const [project, setProject] = useState(0);
 
 	return (
 		<main className="pages" id="projects-page">
-			{/* <i className="fa-solid fa-chevron-right"></i>
-			<i className="fa-solid fa-chevron-left"></i>
-			<ul className="projects-container">
-				<li className="project"></li>
-				<li className="project"></li>
-				<li className="project"></li>
-			</ul> */}
-			<Slideshow setPage={setPage} />
+			<Slideshow setProject={setProject} />
 			<nav className="project-info">
 				<div className="link">
 					<a
-						href={projectLinks[page].live}
+						href={projectLinks[project].live}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
 						<i className="fa-solid fa-house"></i>
-						Live
+						Live 
 					</a>
 				</div>
 				<div className="link">
 					<a
-						href={projectLinks[page].code}
+						href={projectLinks[project].code}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
