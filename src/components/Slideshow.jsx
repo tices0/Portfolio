@@ -9,9 +9,7 @@ function Slideshow() {
 	const [size, setSize] = useState(0);
 
 	useEffect(() => {
-		console.log("========== initial use effect");
 		setSize(slidesRef.current[0].clientWidth);
-		console.log("size before initial transform:", size);
 		slideContainer.current.style.transform =
 			"translateX(" + -size * counter + "px)";
 		// eslint-disable-next-line
@@ -38,20 +36,27 @@ function Slideshow() {
 	const forwardBtn = () => {
 		if (counter >= slidesRef.current.length - 1) return;
 		slideContainer.current.style.transition = "transform 0.4s ease-in-out";
-		setCounter(old => old++);
-		slideContainer.current.style.transform =
-			"translateX(" + -size * counter + "px)";
+		setCounter(old => old + 1);
+		// slideContainer.current.style.transform =
+		// 	"translateX(" + -size * counter + "px)";
+		console.log("forward button clicked");
 	};
 
 	const backwardsBtn = () => {
 		if (counter >= slidesRef.current.length - 1) return;
 		slideContainer.current.style.transition = "transform 0.4s ease-in-out";
-		setCounter(old => old--);
-		slideContainer.current.style.transform =
-			"translateX(" + -size * counter + "px)";
+		setCounter(old => old - 1);
+		// slideContainer.current.style.transform =
+		// 	"translateX(" + -size * counter + "px)";
+		console.log("back button clicked");
 	};
 
-	useEffect(() => console.log("counter changed:", counter), [counter]);
+	useEffect(() => {
+		console.log("counter changed:", counter);
+		slideContainer.current.style.transform =
+			"translateX(" + -size * counter + "px)";
+		// eslint-disable-next-line
+	}, [counter]);
 
 	return (
 		<section className="slide-container">
