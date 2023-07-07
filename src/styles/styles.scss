@@ -351,6 +351,15 @@ body {
 	width: calc(100vw - 10rem);
 	height: calc(100vh - 10rem);
 	// z-index: -1;
+
+	.slide {
+		width: calc(100vw - 10rem);
+		height: calc(100vh - 10rem);
+
+		img {
+			width: 100%;
+		}
+	}
 }
 
 .project-info {
@@ -369,7 +378,7 @@ body {
 		color: #fff;
 		font-weight: 500;
 		font-size: 14px;
-		
+
 		&:hover {
 			background-color: $dark-pink;
 			border-color: $dark-pink;
