@@ -1,26 +1,6 @@
 import React, { useState } from "react";
 import Slideshow from "../components/Slideshow";
-
-export const projectLinks = [
-	// github jobs
-	{
-		live: "https://github-jobs-f3d40.web.app/",
-		code: "https://github.com/tochidavids/React-Projects/tree/master/github-jobs",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/github-jobs/README.md",
-	},
-	// weather app
-	{
-		live: "https://weather-app-e04df.web.app/",
-		code: "https://github.com/tochidavids/React-Projects/tree/master/weather",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/weather/README.md",
-	},
-	// interactive comment section
-	{
-		live: "https://interactive-comment-sect-e566e.web.app/",
-		code: "https://github.com/tochidavids/React-Projects/tree/master/interactive-comment-section",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/interactive-comment-section/README.md",
-	},
-];
+import { projectLinks } from "..";
 
 function Projects() {
 	const [page, setPage] = useState(0);
@@ -57,7 +37,7 @@ function Projects() {
 					</a>
 				</div>
 				<div className="link">
-					<i class="fa-solid fa-info"></i>
+					<i className="fa-solid fa-info"></i>
 					README
 				</div>
 			</nav>

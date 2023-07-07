@@ -346,19 +346,57 @@ body {
 // Projects Page
 // =============
 
+#projects-page {
+	@include flexCenter(row);
+}
+
 .slide-container {
-	@include absoluteCenter();
-	width: calc(100vw - 10rem);
-	height: calc(100vh - 10rem);
-	// z-index: -1;
+	width: 100%;
+	overflow-x: hidden;
+	position: relative;
+	margin: auto;
 
-	.slide {
-		width: calc(100vw - 10rem);
-		height: calc(100vh - 10rem);
+	.slides {
+		display: flex;
+		width: 100%;
+	}
 
-		img {
-			width: 100%;
+	.chevrons {
+		.chevron {
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			z-index: 10;
+			cursor: pointer;
+			color: #fff;
+			font-size: 20px;
+
+			&:hover {
+				color: $dark-pink;
+			}
 		}
+
+		#prev-btn {
+			left: 2rem;
+			text-shadow: -1px 1px 5px $grey;
+		}
+
+		#next-btn {
+			right: 2rem;
+			text-shadow: -0.5px 0.5px 3px $grey;
+		}
+	}
+}
+
+.slide {
+	min-width: 100vw;
+	height: calc(100vh - 10rem);
+	@include flexCenter(row);
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
 	}
 }
 
