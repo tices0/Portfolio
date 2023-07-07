@@ -43,7 +43,7 @@ function Projects() {
 						rel="noopener noreferrer"
 					>
 						<i className="fa-solid fa-house"></i>
-						live
+						Live
 					</a>
 				</div>
 				<div className="link">
@@ -53,7 +53,7 @@ function Projects() {
 						rel="noopener noreferrer"
 					>
 						<i className="fa-solid fa-code"></i>
-						source code
+						Source Code
 					</a>
 				</div>
 				<div className="link">

@@ -5,11 +5,11 @@ import githubJobsDestop from "../media/desktop-screenshots/github-jobs.png";
 import weatherAppDestop from "../media/desktop-screenshots/weather-app.png";
 import commentSectionDestop from "../media/desktop-screenshots/comment-section.png";
 
-const spanStyle = {
-	padding: "20px",
-	background: "#efefef",
-	color: "#000000",
-};
+// const spanStyle = {
+// 	padding: "20px",
+// 	background: "#efefef",
+// 	color: "#000000",
+// };
 
 const divStyle = {
 	display: "flex",
@@ -21,6 +21,7 @@ const divStyle = {
 	height: "calc(100vh - 10rem)",
 	width: "calc(100vw - 10rem)",
 };
+
 const slideImages = [
 	{
 		url: githubJobsDestop,
@@ -50,7 +51,7 @@ const Slideshow = ({ setPage }) => {
 							}}
 							id={`slide${index}`}
 						>
-							<span style={spanStyle}>{slideImage.caption}</span>
+							{/* <span style={spanStyle}>{slideImage.caption}</span> */}
 						</div>
 					</li>
 				))}
