@@ -36,22 +36,30 @@ function Projects() {
 			</ul> */}
 			<Slideshow setPage={setPage} />
 			<nav className="project-info">
-				<a
-					href={projectLinks[page].live}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<i className="fa-solid fa-house"></i>
-				</a>
-				<a
-					href={projectLinks[page].code}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<i className="fa-solid fa-code"></i>
-				</a>
-
-				<i class="fa-solid fa-info"></i>
+				<div className="link">
+					<a
+						href={projectLinks[page].live}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i className="fa-solid fa-house"></i>
+						live
+					</a>
+				</div>
+				<div className="link">
+					<a
+						href={projectLinks[page].code}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<i className="fa-solid fa-code"></i>
+						source code
+					</a>
+				</div>
+				<div className="link">
+					<i class="fa-solid fa-info"></i>
+					README
+				</div>
 			</nav>
 		</main>
 	);

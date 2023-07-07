@@ -97,7 +97,6 @@ body {
 		text-align: center;
 	}
 
-
 	// .fa-circle {
 	// 	position: absolute;
 	// 	top: 50%;
@@ -352,6 +351,11 @@ body {
 	* {
 		color: #fff;
 	}
+}
+.slide-container {
+	@include absoluteCenter();
+	width: calc(100vw - 10rem);
+	height: calc(100vh - 10rem);
 }
 
 // =============

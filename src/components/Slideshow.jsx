@@ -1,9 +1,9 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import githubJobsDestop from '../media/desktop-screenshots/github-jobs.png'
-import weatherAppDestop from '../media/desktop-screenshots/weather-app.png'
-import commentSectionDestop from '../media/desktop-screenshots/comment-section.png'
+import githubJobsDestop from "../media/desktop-screenshots/github-jobs.png";
+import weatherAppDestop from "../media/desktop-screenshots/weather-app.png";
+import commentSectionDestop from "../media/desktop-screenshots/comment-section.png";
 
 const spanStyle = {
 	padding: "20px",
@@ -15,8 +15,11 @@ const divStyle = {
 	display: "flex",
 	alignItems: "center",
 	justifyContent: "center",
-	backgroundSize: "cover",
-	height: "400px",
+	backgroundSize: "contain",
+	backgroundRepeat: "no-repeat",
+	backgroundPosition: "center",
+	height: "calc(100vh - 10rem)",
+	width: "calc(100vw - 10rem)",
 };
 const slideImages = [
 	{
@@ -33,7 +36,7 @@ const slideImages = [
 	},
 ];
 
-const Slideshow = ({setPage}) => {
+const Slideshow = ({ setPage }) => {
 	return (
 		<ul className="slide-container">
 			<Slide>
@@ -45,7 +48,7 @@ const Slideshow = ({setPage}) => {
 								...divStyle,
 								backgroundImage: `url(${slideImage.url})`,
 							}}
-                            id={`slide${index}`}
+							id={`slide${index}`}
 						>
 							<span style={spanStyle}>{slideImage.caption}</span>
 						</div>

@@ -217,4 +217,13 @@ body::-webkit-scrollbar {
 }
 #projects-page * {
   color: #fff;
+}
+
+.slide-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - 10rem);
+  height: calc(100vh - 10rem);
 }/*# sourceMappingURL=styles.css.map */
