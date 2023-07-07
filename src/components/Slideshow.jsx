@@ -19,16 +19,12 @@ function Slideshow() {
 		if (slidesRef.current[counter].id === "lastClone") {
 			slideContainer.current.style.transition = "none";
 			setCounter(slidesRef.current.length - 2);
-			// slideContainer.current.style.transform =
-			// 	"translateX(" + -size * counter + "px)";
 			console.log("on last clone");
 		}
 
 		if (slidesRef.current[counter].id === "firstClone") {
 			slideContainer.current.style.transition = "none";
 			setCounter(slidesRef.current.length - counter);
-			// slideContainer.current.style.transform =
-			// 	"translateX(" + -size * counter + "px)";
 			console.log("on first clone");
 		}
 	};
@@ -37,8 +33,6 @@ function Slideshow() {
 		if (counter >= slidesRef.current.length - 1) return;
 		slideContainer.current.style.transition = "transform 0.4s ease-in-out";
 		setCounter(old => old + 1);
-		// slideContainer.current.style.transform =
-		// 	"translateX(" + -size * counter + "px)";
 		console.log("forward button clicked");
 	};
 
@@ -46,8 +40,6 @@ function Slideshow() {
 		if (counter >= slidesRef.current.length - 1) return;
 		slideContainer.current.style.transition = "transform 0.4s ease-in-out";
 		setCounter(old => old - 1);
-		// slideContainer.current.style.transform =
-		// 	"translateX(" + -size * counter + "px)";
 		console.log("back button clicked");
 	};
 
