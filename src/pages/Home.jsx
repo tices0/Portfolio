@@ -9,9 +9,8 @@ function Home() {
 			{/* <GradientSvg /> */}
 			{/* <i className="fa-solid fa-circle"></i> */}
 
-			<p className="intro-">
-				Hey, my name is Tochi Davids and I am a frontend web developer,
-				who utilises React JS and SCSS.
+			<p className="intro-text">
+				Hey, my name is Tochi Davids and I am a frontend web developer
 			</p>
 			{/* <div className="first-outline">
 				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />
@@ -67,16 +66,16 @@ function Home() {
 						<p>Easily intergrated</p>
 					</li>
 					<li className="third">
-						<i class="fa-solid fa-clock"></i>
-						<h1>Tailwind</h1>
-						<p>For quick completion</p>
+						<i class="fa-solid fa-code"></i>
+						<h1>Git</h1>
+						<p>Version control</p>
 					</li>
 				</ul>
 			</section>
-			<div className="made-by">
+			{/* <div className="made-by">
 				<i class="fa-solid fa-copyright"></i> 2023, made entirely by
 				Tochi Davids
-			</div>
+			</div> */}
 		</main>
 	);
 }

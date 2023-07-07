@@ -1,6 +1,9 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import githubJobsDestop from '../media/desktop-screenshots/github-jobs.png'
+import weatherAppDestop from '../media/desktop-screenshots/weather-app.png'
+import commentSectionDestop from '../media/desktop-screenshots/comment-section.png'
 
 const spanStyle = {
 	padding: "20px",
@@ -17,20 +20,20 @@ const divStyle = {
 };
 const slideImages = [
 	{
-		url: "../media/desktop-screenshots/github-jobs.png",
+		url: githubJobsDestop,
 		caption: "Github Jobs",
 	},
 	{
-		url: "../media/desktop-screenshots/weather-app.png",
+		url: weatherAppDestop,
 		caption: "Weather App",
 	},
 	{
-		url: "../media/desktop-screenshots/comment-section.png",
+		url: commentSectionDestop,
 		caption: "Interactive Comment Section",
 	},
 ];
 
-const Slideshow = () => {
+const Slideshow = ({setPage}) => {
 	return (
 		<ul className="slide-container">
 			<Slide>
