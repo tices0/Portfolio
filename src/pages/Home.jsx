@@ -66,7 +66,7 @@ function Home() {
 						<p>Easily intergrated</p>
 					</li>
 					<li className="third">
-						<i class="fa-solid fa-code"></i>
+						<i className="fa-solid fa-code"></i>
 						<h1>Git</h1>
 						<p>Version control</p>
 					</li>

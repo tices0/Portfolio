@@ -4,6 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import githubJobsDestop from "../media/desktop-screenshots/github-jobs.png";
 import weatherAppDestop from "../media/desktop-screenshots/weather-app.png";
 import commentSectionDestop from "../media/desktop-screenshots/comment-section.png";
+import { projectLinks } from "../pages/Projects";
 
 // const spanStyle = {
 // 	padding: "20px",
@@ -20,6 +21,7 @@ const divStyle = {
 	backgroundPosition: "center",
 	height: "calc(100vh - 10rem)",
 	width: "calc(100vw - 10rem)",
+	zIndex: "999",
 };
 
 const slideImages = [
@@ -50,6 +52,13 @@ const Slideshow = ({ setPage }) => {
 								backgroundImage: `url(${slideImage.url})`,
 							}}
 							id={`slide${index}`}
+							onClick={() => {
+								window.open(
+									`${projectLinks[index].live}`,
+									"_blank",
+								);
+								console.log("clicked");
+							}}
 						>
 							{/* <span style={spanStyle}>{slideImage.caption}</span> */}
 						</div>

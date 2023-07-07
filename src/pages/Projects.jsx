@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Slideshow from "../components/Slideshow";
 
-const projectLinks = [
+export const projectLinks = [
 	// github jobs
 	{
 		live: "https://github-jobs-f3d40.web.app/",

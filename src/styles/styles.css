@@ -220,7 +220,6 @@ body::-webkit-scrollbar {
   transform: translate(-50%, -50%);
   width: calc(100vw - 10rem);
   height: calc(100vh - 10rem);
-  z-index: -1;
 }
 
 .project-info {
