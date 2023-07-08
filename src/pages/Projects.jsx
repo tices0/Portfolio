@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Slideshow from "../components/Slideshow";
 import { getMarkdown, projectLinks } from "..";
-import ReactMarkdown from "https://esm.sh/react-markdown@7";
 
 function Projects() {
 	const [project, setProject] = useState(0);
@@ -9,16 +8,14 @@ function Projects() {
 	const [markdown, setMarkdown] = useState("");
 
 	useEffect(() => {
-		// const oldMarkdown = markdown
 		const addMarkdown = async () => {
 			if (showMD) {
-				const readme = await getMarkdown(project)
-				setMarkdown(readme)
+				const readme = await getMarkdown(project);
+				setMarkdown(readme);
 			}
+		};
 
-		}
-
-		addMarkdown()
+		addMarkdown();
 	}, [showMD, project]);
 
 	return (
@@ -52,7 +49,6 @@ function Projects() {
 			</nav>
 			{showMD ? (
 				<article className="markdown-container">
-					<ReactMarkdown children={markdown} />
 				</article>
 			) : (
 				""
