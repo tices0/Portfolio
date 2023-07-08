@@ -15,24 +15,31 @@ export const projectLinks = [
 	{
 		live: "https://github-jobs-f3d40.web.app/",
 		code: "https://github.com/tochidavids/React-Projects/tree/master/github-jobs",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/github-jobs/README.md",
+		markdown: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/github-jobs/README.md",
     desktop: "desktop-screenshots/github-jobs.png"
 	},
 	// weather app
 	{
 		live: "https://weather-app-e04df.web.app/",
 		code: "https://github.com/tochidavids/React-Projects/tree/master/weather",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/weather/README.md",
+		markdown: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/weather/README.md",
     desktop: "desktop-screenshots/weather-app.png"
 	},
 	// interactive comment section
 	{
     live: "https://interactive-comment-sect-e566e.web.app/",
 		code: "https://github.com/tochidavids/React-Projects/tree/master/interactive-comment-section",
-		md: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/interactive-comment-section/README.md",
+		markdown: "https://raw.githubusercontent.com/tochidavids/React-Projects/master/interactive-comment-section/README.md",
     desktop: "desktop-screenshots/comment-section.png"
 	},
 ];
+
+export const getMarkdown = async (project) => {
+    const markdown = await fetch(projectLinks[project].markdown)
+    const res = await markdown.text()
+    console.log(res)
+    return res
+}
 
 const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
   const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;

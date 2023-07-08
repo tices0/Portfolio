@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slideshow from "../components/Slideshow";
-import { projectLinks } from "..";
+import { getMarkdown, projectLinks } from "..";
+import ReactMarkdown from "https://esm.sh/react-markdown@7";
 
 function Projects() {
 	const [project, setProject] = useState(0);
+	const [showMD, setShowMD] = useState(false);
+	const [markdown, setMarkdown] = useState("");
+
+	useEffect(() => {
+		// const oldMarkdown = markdown
+		const addMarkdown = async () => {
+			if (showMD) {
+				const readme = await getMarkdown(project)
+				setMarkdown(readme)
+			}
+
+		}
+
+		addMarkdown()
+	}, [showMD, project]);
 
 	return (
 		<main className="pages" id="projects-page">
@@ -16,7 +32,7 @@ function Projects() {
 						rel="noopener noreferrer"
 					>
 						<i className="fa-solid fa-house"></i>
-						Live 
+						Live
 					</a>
 				</div>
 				<div className="link">
@@ -29,11 +45,18 @@ function Projects() {
 						Source Code
 					</a>
 				</div>
-				<div className="link">
+				<div className="link" onClick={() => setShowMD(old => !old)}>
 					<i className="fa-solid fa-info"></i>
 					README
 				</div>
 			</nav>
+			{showMD ? (
+				<article className="markdown-container">
+					<ReactMarkdown children={markdown} />
+				</article>
+			) : (
+				""
+			)}
 		</main>
 	);
 }
