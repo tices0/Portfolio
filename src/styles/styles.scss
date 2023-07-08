@@ -347,7 +347,7 @@ body {
 // =============
 
 #projects-page {
-	@include flexCenter(row);
+	@include flexCenter(column);
 }
 
 .slide-container {
@@ -372,7 +372,7 @@ body {
 			font-size: 30px;
 
 			&:hover {
-				color: $dark-pink;
+				color: $light-red;
 			}
 		}
 
@@ -418,8 +418,8 @@ body {
 		font-size: 14px;
 
 		&:hover {
-			background-color: $dark-pink;
-			border-color: $dark-pink;
+			background-color: $light-red;
+			border-color: $light-red;
 		}
 
 		a {

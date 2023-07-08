@@ -37,12 +37,6 @@ export const projectLinks = [
 	},
 ];
 
-export const getMarkdown = async project => {
-	const markdown = await fetch(projectLinks[project].markdown)
-	const res = await markdown.text();
-	return res;
-};
-
 const polarToCartesian = (centerX, centerY, radius, angleInDegrees) => {
 	const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180.0;
 	return {

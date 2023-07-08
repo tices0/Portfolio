@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Slideshow from "../components/Slideshow";
-import { getMarkdown, projectLinks } from "..";
+import {  projectLinks } from "..";
 
 function Projects() {
 	const [project, setProject] = useState(0);
-	const [showMD, setShowMD] = useState(false);
-	const [markdown, setMarkdown] = useState("");
-
-	useEffect(() => {
-		const addMarkdown = async () => {
-			if (showMD) {
-				const readme = await getMarkdown(project);
-				setMarkdown(readme);
-			}
-		};
-
-		addMarkdown();
-	}, [showMD, project]);
 
 	return (
 		<main className="pages" id="projects-page">
@@ -42,17 +29,7 @@ function Projects() {
 						Source Code
 					</a>
 				</div>
-				<div className="link" onClick={() => setShowMD(old => !old)}>
-					<i className="fa-solid fa-info"></i>
-					README
-				</div>
 			</nav>
-			{showMD ? (
-				<article className="markdown-container">
-				</article>
-			) : (
-				""
-			)}
 		</main>
 	);
 }
