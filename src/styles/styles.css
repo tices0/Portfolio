@@ -203,17 +203,17 @@ body {
   z-index: 10;
   cursor: pointer;
   color: #fff;
-  font-size: 30px;
+  font-size: 35px;
 }
 .slide-container .chevrons .chevron:hover {
   color: #d73e3f;
 }
 .slide-container .chevrons #prev-btn {
-  left: 2rem;
+  left: 10rem;
   text-shadow: -1px 1px 5px #5a5252;
 }
 .slide-container .chevrons #next-btn {
-  right: 2rem;
+  right: 10rem;
   text-shadow: -0.5px 0.5px 3px #5a5252;
 }
 

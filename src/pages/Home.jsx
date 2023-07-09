@@ -10,7 +10,7 @@ function Home() {
 			{/* <i className="fa-solid fa-circle"></i> */}
 
 			<p className="intro-text">
-				Hey, my name is Tochi Davids and I am a web developer
+				Hey, my name is Tochi Davids and I am a Web Developer
 			</p>
 			{/* <div className="first-outline">
 				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />

@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "../components/Contact";
 
 function Contact() {
 	return (
@@ -36,22 +37,7 @@ function Contact() {
 			</section>
 
 			<section className="contact-form">
-				<form action="">
-					<h1>Contact Me</h1>
-					<div className="top">
-						<input type="text" placeholder="Firstname" />
-						<input type="text" placeholder="Lastname" />
-					</div>
-					<input type="email" name="" id="" placeholder="Email" />
-					<textarea
-						placeholder="Content"
-						name=""
-						id=""
-						cols="30"
-						rows="10"
-					></textarea>
-					<input type="submit" className="send" value="SEND" />
-				</form>
+				<ContactForm />
 			</section>
 		</main>
 	);

@@ -249,7 +249,7 @@ body {
 			z-index: 10;
 			cursor: pointer;
 			color: #fff;
-			font-size: 30px;
+			font-size: 35px;
 
 			&:hover {
 				color: $light-red;
@@ -257,12 +257,12 @@ body {
 		}
 
 		#prev-btn {
-			left: 2rem;
+			left: 10rem;
 			text-shadow: -1px 1px 5px $grey;
 		}
 
 		#next-btn {
-			right: 2rem;
+			right: 10rem;
 			text-shadow: -0.5px 0.5px 3px $grey;
 		}
 	}
