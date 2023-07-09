@@ -5,26 +5,27 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { SectionsContainer, Section } from "react-fullpage";
+import { ScrollToTopOnMount, SectionsContainer } from "react-fullpage";
 
 const options = {
 	sectionClassName: "pages",
 	anchors: ["home", "projects", "about", "contact"],
 	scrollBar: false,
-	navigation: false,
+	navigation: true,
+	activeClass: "active",
 };
 
 function App() {
-	// const [activePage, setActivePage] = useState(0);
-
 	return (
-		<SectionsContainer {...options}>
-			{/* <NavBar activePage={activePage} setActivePage={setActivePage} /> */}
-			<Home />
-			<Projects />
-			<About />
-			<Contact />
-		</SectionsContainer>
+		<>
+			<ScrollToTopOnMount />
+			<SectionsContainer {...options}>
+				<Home />
+				<Projects />
+				<About />
+				<Contact />
+			</SectionsContainer>
+		</>
 	);
 }
 
