@@ -298,4 +298,39 @@ body::-webkit-scrollbar {
 }
 .project-info .link i {
   padding-right: 0.5rem;
+}
+
+#about-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  grid-template-areas: "frontend backend tools" "frontend backend cv";
+  padding: 5rem;
+}
+#about-page .info-box {
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: #9d0203;
+}
+#about-page .info-box li {
+  font-size: 20px;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+}
+#about-page .info-box .django {
+  font-style: none;
+  font-weight: 700;
+}
+#about-page .info-box.frontend {
+  grid-area: frontend;
+}
+#about-page .info-box.backend {
+  grid-area: backend;
+}
+#about-page .info-box.tools {
+  grid-area: tools;
+}
+#about-page .info-box.cv {
+  grid-area: cv;
 }/*# sourceMappingURL=styles.css.map */

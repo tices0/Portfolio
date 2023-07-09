@@ -434,6 +434,61 @@ body {
 		}
 	}
 }
+
+// =============
+// About
+// =============
+
+#about-page {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr 1fr;
+	gap: 2rem;
+	grid-template-areas:
+		"frontend backend tools"
+		"frontend backend cv";
+	padding: 5rem;
+
+	.info-box {
+		border-radius: 20px;
+		padding: 2rem;
+		background-color: $medium-red;
+
+		li {
+			font-size: 20px;
+			padding: 0.25rem 0.5rem;
+			font-weight: 700;
+		}
+
+		.django {
+			font-style: none;
+			font-weight: 700;
+		}
+
+		&.frontend {
+			// background-color: $light-red;
+			grid-area: frontend;
+		}
+
+		&.backend {
+			// background-color: $medium-red;
+			grid-area: backend;
+		}
+
+		// &.end {
+		// 	background-color: $dark-red;
+		// }
+
+		&.tools {
+			grid-area: tools;
+		}
+
+		&.cv {
+			grid-area: cv;
+		}
+	}
+}
+
 // =============
 //
 // =============
