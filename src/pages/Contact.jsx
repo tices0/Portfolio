@@ -35,11 +35,14 @@ function Contact() {
 				</a>
 			</section>
 
-			<section className="send-mail">
+			<section className="contact-form">
 				<form action="">
-					<input type="text" placeholder="Name" />
+					<h1>Contact Me</h1>
+					<div className="top">
+						<input type="text" placeholder="Firstname" />
+						<input type="text" placeholder="Lastname" />
+					</div>
 					<input type="email" name="" id="" placeholder="Email" />
-					<input type="text" placeholder="Subject" />
 					<textarea
 						placeholder="Content"
 						name=""
@@ -47,6 +50,7 @@ function Contact() {
 						cols="30"
 						rows="10"
 					></textarea>
+					<input type="submit" className="send" value="SEND" />
 				</form>
 			</section>
 		</main>
