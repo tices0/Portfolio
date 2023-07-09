@@ -413,7 +413,7 @@ body {
   border: none;
   border-radius: 0;
   width: 100%;
-  background-color: #e4a3a3;
+  background-color: #fff;
 }
 #contact-page form .top {
   display: flex;
@@ -434,5 +434,5 @@ body {
   background-color: #0b0303;
 }
 #contact-page form .send:hover {
-  color: #9d0203;
+  color: #f9e3e2;
 }/*# sourceMappingURL=styles.css.map */
