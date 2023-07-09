@@ -10,6 +10,7 @@ function Contact() {
                     <textarea placeholder="" name="" id="" cols="30" rows="10"></textarea>
                 </form>
             </section>
+			
 			<section className="social-links">
 				<a
 					href="https://github.com/tochidavids"
