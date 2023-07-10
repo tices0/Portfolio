@@ -73,7 +73,9 @@ function Slideshow({ setProject, project, showInfo }) {
 						<h1>{projectLinks[project].title}</h1>
 						<ul>
 							{projectLinks[project].tech.map((value, index) => (
-								<li key={index}>{value}</li>
+								<li className="project-tech" key={index}>
+									{value}
+								</li>
 							))}
 						</ul>
 						{projectLinks[project].info ? (
@@ -90,10 +92,7 @@ function Slideshow({ setProject, project, showInfo }) {
 					id="lastClone"
 					ref={el => (slidesRef.current[0] = el)}
 				>
-					<img
-						src={require("../media/desktop-screenshots/weather-app.png")}
-						alt=""
-					/>
+					<img src={require("../media/weather-app.png")} alt="" />
 				</div>
 				{/* MAIN */}
 				{projectLinks.map((project, index) => (
@@ -103,7 +102,7 @@ function Slideshow({ setProject, project, showInfo }) {
 						key={index}
 					>
 						<img
-							src={require(`../media/${project.desktop}`)}
+							src={require(`../media/${project.image}`)}
 							alt=""
 						/>
 					</div>
@@ -114,10 +113,7 @@ function Slideshow({ setProject, project, showInfo }) {
 					id="firstClone"
 					ref={el => (slidesRef.current[4] = el)}
 				>
-					<img
-						src={require("../media/desktop-screenshots/github-jobs.png")}
-						alt=""
-					/>
+					<img src={require("../media/github-jobs.png")} alt="" />
 				</div>
 			</div>
 		</section>

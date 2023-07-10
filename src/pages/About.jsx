@@ -52,7 +52,7 @@ function About() {
 					rel="noopener noreferrer"
 				>
 					<div className="cv">
-						CV <i class="fa-solid fa-file-export"></i>
+						CV <i className="fa-solid fa-file-export"></i>
 					</div>
 				</a>
 			</div>
@@ -60,22 +60,22 @@ function About() {
 				<h1>Frontend</h1>
 				<ul className="technologies">
 					<li className="technology">
-						<i class="fa-brands fa-html5"></i> HTML
+						<i className="fa-brands fa-html5"></i> HTML
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-css3-alt"></i> CSS
+						<i className="fa-brands fa-css3-alt"></i> CSS
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-bootstrap"></i> Bootstrap
+						<i className="fa-brands fa-bootstrap"></i> Bootstrap
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-sass"></i> SCSS
+						<i className="fa-brands fa-sass"></i> SCSS
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-square-js"></i> Javascript
+						<i className="fa-brands fa-square-js"></i> Javascript
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-react"></i> React JS
+						<i className="fa-brands fa-react"></i> React JS
 					</li>
 				</ul>
 			</div>
@@ -83,13 +83,13 @@ function About() {
 				<h1>Backend</h1>
 				<ul className="technologies">
 					<li className="technology">
-						<i class="fa-brands fa-python"></i> Python
+						<i className="fa-brands fa-python"></i> Python
 					</li>
 					<li className="technology">
 						<i className="django">dj</i> Django
 					</li>
 					<li className="technology">
-						<i class="fa-solid fa-database"></i> SQLite
+						<i className="fa-solid fa-database"></i> SQLite
 					</li>
 				</ul>
 			</div>
@@ -97,16 +97,16 @@ function About() {
 				<h1>Tools</h1>
 				<ul className="technologies">
 					<li className="technology">
-						<i class="fa-brands fa-git-alt"></i> Git
+						<i className="fa-brands fa-git-alt"></i> Git
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-github"></i> Github
+						<i className="fa-brands fa-github"></i> Github
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-linux"></i> Linux
+						<i className="fa-brands fa-linux"></i> Linux
 					</li>
 					<li className="technology">
-						<i class="fa-brands fa-figma"></i> Figma
+						<i className="fa-brands fa-figma"></i> Figma
 					</li>
 				</ul>
 			</div>

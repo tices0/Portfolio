@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/styles.css";
 // import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import { ScrollToTopOnMount, SectionsContainer } from "react-fullpage";
 
-const options = {
+let options = {
 	sectionClassName: "pages",
 	anchors: ["home", "projects", "about", "contact"],
 	scrollBar: false,
@@ -16,15 +16,36 @@ const options = {
 };
 
 function App() {
+	const [disableScroll, setDisableScroll] = useState(false);
+
+	useEffect(() => {
+		window.addEventListener("resize", () => {
+			if (window.innerWidth > 825) setDisableScroll(false);
+			else setDisableScroll(true);
+		});
+		// eslint-disable-next-line
+	}, []);
+
 	return (
 		<>
-			<ScrollToTopOnMount />
-			<SectionsContainer {...options}>
-				<Home />
-				<Projects />
-				<About />
-				<Contact />
-			</SectionsContainer>
+			{disableScroll ? (
+				<>
+					<Home />
+					<Projects />
+					<About />
+					<Contact />
+				</>
+			) : (
+				<>
+					<ScrollToTopOnMount />
+					<SectionsContainer {...options}>
+						<Home />
+						<Projects />
+						<About />
+						<Contact />
+					</SectionsContainer>{" "}
+				</>
+			)}
 		</>
 	);
 }
