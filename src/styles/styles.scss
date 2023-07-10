@@ -58,6 +58,12 @@ body {
 	position: relative;
 }
 
+@media only screen and (max-width: 825px) {
+	.pages {
+		height: auto;
+	}
+}
+
 // =============
 // Home Page
 // =============
@@ -238,17 +244,74 @@ body {
 	#home-page {
 		@include flexCenter(column);
 		gap: 2rem;
+		padding: 4rem;
 
 		.intro-text {
-			position: relative;
+			position: static;
 			font-size: 35px;
+			transform: none;
+			width: 500px;
+			// top: unset;
+			// left: unset;
 		}
 
 		section.info {
-			position: relative;
-			flex-direction: column;
+			position: static;
+			justify-content: center;
 			gap: 2rem;
+			transform: none;
+			padding: 2rem;
+			flex-direction: column;
+			height: auto;
+
+			ul {
+				flex-direction: row;
+				justify-content: space-around;
+				width: 100%;
+				padding: 0 2rem;
+
+				&.right {
+					width: 100%;
+					li {
+						border-right: none;
+						padding-right: 0;
+						border-bottom: 2px solid $light-red;
+						padding-bottom: 1rem;
+
+						&::after {
+							right: unset;
+							top: unset;
+							bottom: -2px;
+							left: 0;
+							width: 1.5rem;
+							height: 2px;
+							// animation: lineMovementMobile 10s infinite;
+							animation-name: lineMovementMobile;
+						}
+					}
+				}
+
+				&.left .rotated-text {
+					transform: none;
+					text-align: center;
+				}
+			}
 		}
+
+		.scroll-down {
+			display: none;
+		}
+	}
+}
+
+@keyframes lineMovementMobile {
+	0%,
+	100% {
+		left: 0;
+		color: blue;
+	}
+	50% {
+		right: calc(100% - 1rem);
 	}
 }
 

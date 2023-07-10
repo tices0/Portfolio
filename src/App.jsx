@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./styles/styles.css";
-// import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
@@ -16,9 +15,14 @@ let options = {
 };
 
 function App() {
-	const [disableScroll, setDisableScroll] = useState(false);
+	const [disableScroll, setDisableScroll] = useState();
 
 	useEffect(() => {
+		if (typeof disableScroll === "undefined") {
+			if (window.innerWidth > 825) setDisableScroll(false);
+			else setDisableScroll(true);
+		}
+
 		window.addEventListener("resize", () => {
 			if (window.innerWidth > 825) setDisableScroll(false);
 			else setDisableScroll(true);

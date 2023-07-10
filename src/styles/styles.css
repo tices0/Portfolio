@@ -30,6 +30,11 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 825px) {
+  .pages {
+    height: auto;
+  }
+}
 #home-page .intro-text {
   font-weight: 700;
   position: absolute;
@@ -198,15 +203,62 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding: 4rem;
   }
   #home-page .intro-text {
-    position: relative;
+    position: static;
     font-size: 35px;
+    transform: none;
+    width: 500px;
   }
   #home-page section.info {
-    position: relative;
-    flex-direction: column;
+    position: static;
+    justify-content: center;
     gap: 2rem;
+    transform: none;
+    padding: 2rem;
+    flex-direction: column;
+    height: auto;
+  }
+  #home-page section.info ul {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  #home-page section.info ul.right {
+    width: 100%;
+  }
+  #home-page section.info ul.right li {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 2px solid #d73e3f;
+    padding-bottom: 1rem;
+  }
+  #home-page section.info ul.right li::after {
+    right: unset;
+    top: unset;
+    bottom: -2px;
+    left: 0;
+    width: 1.5rem;
+    height: 2px;
+    animation-name: lineMovementMobile;
+  }
+  #home-page section.info ul.left .rotated-text {
+    transform: none;
+    text-align: center;
+  }
+  #home-page .scroll-down {
+    display: none;
+  }
+}
+@keyframes lineMovementMobile {
+  0%, 100% {
+    left: 0;
+    color: blue;
+  }
+  50% {
+    right: calc(100% - 1rem);
   }
 }
 #projects-page {
