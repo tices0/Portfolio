@@ -184,6 +184,15 @@ body {
     top: calc(100% - 1rem);
   }
 }
+@keyframes lineMovementMobile {
+  0%, 100% {
+    left: 0;
+    color: blue;
+  }
+  50% {
+    right: calc(100% - 1rem);
+  }
+}
 @media only screen and (max-width: 1020px) {
   #home-page .intro-text {
     width: 500px;
@@ -222,7 +231,7 @@ body {
   }
   #home-page section.info ul {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding: 0 2rem;
   }
@@ -232,19 +241,25 @@ body {
   #home-page section.info ul.right li {
     border-right: none;
     padding-right: 0;
-    border-bottom: 2px solid #d73e3f;
-    padding-bottom: 1rem;
+    border-top: 2px solid #d73e3f;
+    padding-top: 2rem;
+    width: 175px;
   }
   #home-page section.info ul.right li::after {
     right: unset;
-    top: unset;
-    bottom: -2px;
+    top: -2px;
     left: 0;
     width: 1.5rem;
     height: 2px;
-    animation-name: lineMovementMobile;
+    animation: lineMovementMobile 10s infinite;
   }
-  #home-page section.info ul.left .rotated-text {
+  #home-page section.info ul.left {
+    gap: 0;
+  }
+  #home-page section.info ul.left li {
+    width: 175px;
+  }
+  #home-page section.info ul.left li .rotated-text {
     transform: none;
     text-align: center;
   }
@@ -252,13 +267,59 @@ body {
     display: none;
   }
 }
-@keyframes lineMovementMobile {
-  0%, 100% {
-    left: 0;
-    color: blue;
+@media only screen and (max-width: 715px) {
+  #home-page section.info ul.right li,
+  #home-page section.info ul.left li {
+    width: 150px;
   }
-  50% {
-    right: calc(100% - 1rem);
+}
+@media only screen and (max-width: 630px) {
+  #home-page {
+    height: 100vh;
+  }
+  #home-page section.info {
+    display: none;
+  }
+}
+@media only screen and (max-width: 530px) {
+  #home-page .intro-text {
+    font-size: 30px;
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #home-page .intro-text {
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  #home-page .intro-text {
+    font-size: 27px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #home-page .intro-text {
+    font-size: 25px;
+    width: 275px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  #home-page .intro-text {
+    font-size: 23px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #home-page .intro-text {
+    font-size: 20px;
+    width: 225px;
+  }
+}
+@media only screen and (max-width: 250px) {
+  #home-page .intro-text {
+    font-size: 28px;
+    width: 200px;
   }
 }
 #projects-page {
@@ -291,11 +352,11 @@ body {
   color: #d73e3f;
 }
 .slide-container .chevrons #prev-btn {
-  left: 10rem;
+  left: 4rem;
   text-shadow: -1px 1px 5px #5a5252;
 }
 .slide-container .chevrons #next-btn {
-  right: 10rem;
+  right: 4rem;
   text-shadow: -0.5px 0.5px 3px #5a5252;
 }
 
@@ -348,6 +409,11 @@ body {
   padding-right: 0.5rem;
 }
 
+@media only screen and (max-width: 930px) {
+  .slide {
+    height: calc(100vh - 15rem);
+  }
+}
 #about-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

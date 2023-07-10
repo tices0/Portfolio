@@ -1,14 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slideshow from "../components/Slideshow";
-import {  projectLinks } from "..";
+import MobileProjects from "../components/MobileProjects";
+import { projectLinks } from "..";
 
 function Projects() {
 	const [project, setProject] = useState(0);
-	const [showInfo, setShowInfo] = useState(false)
+	const [showInfo, setShowInfo] = useState(false);
+	const [showSlideshow, setShowSlideshow] = useState();
+
+	useEffect(() => {
+		if (typeof showSlideshow === "undefined") {
+			if (window.innerWidth > 825) setShowSlideshow(true);
+			else setShowSlideshow(false);
+		}
+
+		window.addEventListener("resize", () => {
+			if (window.innerWidth > 825) setShowSlideshow(true);
+			else setShowSlideshow(false);
+		});
+		// eslint-disable-next-line
+	}, []);
 
 	return (
 		<main className="pages" id="projects-page">
-			<Slideshow setProject={setProject} project={project} showInfo={showInfo} />
+			{showSlideshow ? (
+				<Slideshow
+					setProject={setProject}
+					project={project}
+					showInfo={showInfo}
+				/>
+			) : (
+				<MobileProjects />
+			)}
 			<nav className="project-info">
 				<div className="link">
 					<a
@@ -31,8 +54,8 @@ function Projects() {
 					</a>
 				</div>
 				<div className="link" onClick={() => setShowInfo(old => !old)}>
-						<i className="fa-solid fa-info"></i>
-						Info
+					<i className="fa-solid fa-info"></i>
+					Info
 				</div>
 			</nav>
 		</main>
