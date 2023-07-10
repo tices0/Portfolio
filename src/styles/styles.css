@@ -648,6 +648,74 @@ body {
     background-position: left;
   }
 }
+@media only screen and (max-width: 1125px) {
+  #about-page .about-me {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1060px) {
+  #about-page .about-me {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  #about-page .about-me {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 925px) {
+  #about-page {
+    gap: 1rem;
+  }
+  #about-page .about-me {
+    font-size: 12.5px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  #about-page .about-me {
+    padding: 0;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 825px) {
+  #about-page {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "about-me about-me" "frontend backend" "tools .";
+  }
+  #about-page .about-me {
+    font-size: 16px;
+  }
+  #about-page .title {
+    position: absolute;
+    top: 0;
+    left: 4rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #about-page .info-box {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #about-page {
+    padding: 2rem;
+  }
+  #about-page .about-me {
+    font-size: 15px;
+  }
+  #about-page .title {
+    left: 2rem;
+    top: -2rem;
+  }
+}
 #contact-page {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -724,4 +792,10 @@ body {
 }
 #contact-page form .send:hover {
   color: #f9e3e2;
+}
+
+@media only screen and (max-width: 825px) {
+  #contact-page {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */

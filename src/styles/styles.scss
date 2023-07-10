@@ -760,6 +760,88 @@ body {
 	}
 }
 
+@media only screen and (max-width: 1125px) {
+	#about-page .about-me {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (max-width: 1060px) {
+	#about-page .about-me {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 990px) {
+	#about-page .about-me {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 925px) {
+	#about-page {
+		gap: 1rem;
+
+		.about-me {
+			font-size: 12.5px;
+		}
+	}
+}
+
+@media only screen and (max-width: 880px) {
+	#about-page .about-me {
+		padding: 0;
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 825px) {
+	#about-page {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas:
+			"about-me about-me"
+			"frontend backend"
+			"tools .";
+
+		.about-me {
+			font-size: 16px;
+		}
+
+		.title {
+			position: absolute;
+			top: 0;
+			left: 4rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#about-page {
+		@include flexCenter(column);
+
+		.info-box {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	#about-page {
+		padding: 2rem;
+
+		.about-me {
+			font-size: 15px;
+		}
+
+		.title {
+			left: 2rem;
+			top: -2rem;
+		}
+	}
+}
+
 // =============
 // Contact Page
 // =============
@@ -851,5 +933,11 @@ body {
 				color: $beige;
 			}
 		}
+	}
+}
+
+@media only screen and (max-width: 825px) {
+	#contact-page {
+		grid-template-columns: 1fr;
 	}
 }

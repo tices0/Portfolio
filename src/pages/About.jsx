@@ -3,6 +3,7 @@ import React from "react";
 function About() {
 	return (
 		<main className="pages" id="about-page">
+			{window.innerWidth > 825 ? "" : <h1 className="title">About Me</h1>}
 			<div className="about-me">
 				<p>
 					I completed an <b>internship</b> last summer at{" "}
