@@ -794,8 +794,109 @@ body {
   color: #f9e3e2;
 }
 
+@media only screen and (max-width: 1150px) {
+  #contact-page {
+    gap: 6rem;
+  }
+}
 @media only screen and (max-width: 825px) {
   #contact-page {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #contact-page {
+    padding: 4rem;
+  }
+  #contact-page form {
+    padding: 2rem 3rem;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #contact-page {
+    padding: 3rem;
+  }
+  #contact-page .social-links a {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #contact-page .social-links a {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #contact-page .social-links a {
+    font-size: 18px;
+  }
+  #contact-page .social-links a i {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #contact-page {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 380px) {
+  #contact-page .social-links a {
+    font-size: 16px;
+  }
+  #contact-page .social-links a i {
+    font-size: 20px;
+  }
+  #contact-page form {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #contact-page .social-links a.email {
+    font-size: 14px;
+  }
+  #contact-page .social-links a.email i {
+    font-size: 18px;
+  }
+  #contact-page form .top {
+    flex-direction: column;
+  }
+  #contact-page form input,
+  #contact-page form textarea {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  #contact-page .social-links a.email {
+    font-size: 12px;
+  }
+  #contact-page .social-links a.email i {
+    font-size: 16px;
+  }
+  #contact-page form input,
+  #contact-page form textarea {
+    width: 175px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #contact-page form {
+    padding: 2rem 0;
+  }
+  #contact-page form .top {
+    width: calc(100% - 2rem);
+  }
+  #contact-page form h1 {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 285px) {
+  #contact-page .social-links a.email {
+    font-size: 10px;
+  }
+  #contact-page .social-links a.email i {
+    font-size: 14px;
+  }
+  #contact-page form input,
+  #contact-page form textarea {
+    width: 150px;
   }
 }/*# sourceMappingURL=styles.css.map */

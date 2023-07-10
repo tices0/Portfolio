@@ -30,6 +30,7 @@ function Contact() {
 					href="mailto:tochidavids18@gmail.com"
 					target="_blank"
 					rel="noopener noreferrer"
+					className="email"
 				>
 					<i className="fa-solid fa-envelope"></i>{" "}
 					tochidavids18@gmail.com
