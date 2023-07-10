@@ -13,27 +13,34 @@ root.render(
 export const projectLinks = [
 	// github jobs
 	{
+		title: "Job Board",
+		tech: [
+			"React JS",
+			"SASS",
+			"Pagination",
+			"Google Jobs API",
+			"Reverse Geolocation",
+		],
 		live: "https://github-jobs-f3d40.web.app/",
 		code: "https://github.com/tochidavids/React-Projects/tree/master/github-jobs",
-		markdown:
-			"https://raw.githubusercontent.com/tochidavids/React-Projects/master/github-jobs/README.md",
-		desktop: "desktop-screenshots/github-jobs.png",
+		image: "github-jobs.png",
+	},
+	// email server
+	{
+		title: "Email Server",
+		tech: ["Django", "Python", "Javascript", "Bootstrap", "CRUD"],
+		info: 'Use "example1@email.com" and "example2@email.com" (password is "password" for both) to log in for a quick demo',
+		live: "https://github-jobs-f3d40.web.app/",
+		code: "https://github.com/tochidavids/Email-Server",
+		image: "email-server.png",
 	},
 	// weather app
 	{
+		title: "Weather App",
+		tech: ["React JS", "SASS", "Weather API", "Reverse Geolocation"],
 		live: "https://weather-app-e04df.web.app/",
 		code: "https://github.com/tochidavids/React-Projects/tree/master/weather",
-		markdown:
-			"https://raw.githubusercontent.com/tochidavids/React-Projects/master/weather/README.md",
-		desktop: "desktop-screenshots/weather-app.png",
-	},
-	// interactive comment section
-	{
-		live: "https://interactive-comment-sect-e566e.web.app/",
-		code: "https://github.com/tochidavids/React-Projects/tree/master/interactive-comment-section",
-		markdown:
-			"https://raw.githubusercontent.com/tochidavids/React-Projects/master/interactive-comment-section/README.md",
-		desktop: "desktop-screenshots/comment-section.png",
+		image: "weather-app.png",
 	},
 ];
 

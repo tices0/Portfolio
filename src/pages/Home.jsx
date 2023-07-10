@@ -6,16 +6,9 @@ import React from "react";
 function Home() {
 	return (
 		<main className="pages" id="home-page">
-			{/* <GradientSvg /> */}
-			{/* <i className="fa-solid fa-circle"></i> */}
-
 			<p className="intro-text">
 				Hey, my name is Tochi Davids and I am a Web Developer
 			</p>
-			{/* <div className="first-outline">
-				<Svg1 d={describeArc(0.5, 0.5, 0.48, -30, 30)} />
-				<Svg2 d={describeArc(0.5, 0.5, 0.48, 180 - 15, 180 + 15)} />
-			</div> */}
 			<div className="second-outline"></div>
 			<div className="scroll-down">
 				<div className="text">
@@ -72,10 +65,6 @@ function Home() {
 					</li>
 				</ul>
 			</section>
-			{/* <div className="made-by">
-				<i class="fa-solid fa-copyright"></i> 2023, made entirely by
-				Tochi Davids
-			</div> */}
 		</main>
 	);
 }

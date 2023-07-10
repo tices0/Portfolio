@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { projectLinks } from "..";
 
-function Slideshow({setProject}) {
-    const slidesRef = useRef([]);
+function Slideshow({ setProject, project, showInfo }) {
+	const slidesRef = useRef([]);
 	const slideContainer = useRef();
-    
-    const [counter, setCounter] = useState(1);
+
+	const [counter, setCounter] = useState(1);
 	const [size, setSize] = useState(0);
 
 	useEffect(() => {
@@ -42,9 +42,9 @@ function Slideshow({setProject}) {
 	useEffect(() => {
 		slideContainer.current.style.transform =
 			"translateX(" + -size * counter + "px)";
-        if (counter === 0) setProject(2)
-        else if (counter === 4) setProject(0)
-        else setProject(counter - 1)
+		if (counter === 0) setProject(2);
+		else if (counter === 4) setProject(0);
+		else setProject(counter - 1);
 		// eslint-disable-next-line
 	}, [counter]);
 
@@ -68,13 +68,30 @@ function Slideshow({setProject}) {
 				ref={slideContainer}
 				onTransitionEnd={transitionEnd}
 			>
+				{showInfo ? (
+					<div className="info">
+						<h1>{projectLinks[project].title}</h1>
+						<ul>
+							{projectLinks[project].tech.map((value, index) => (
+								<li key={index}>{value}</li>
+							))}
+						</ul>
+						{projectLinks[project].info ? (
+							<p>{projectLinks[project].info}</p>
+						) : (
+							""
+						)}
+					</div>
+				) : (
+					""
+				)}
 				<div
 					className="slide"
 					id="lastClone"
 					ref={el => (slidesRef.current[0] = el)}
 				>
 					<img
-						src={require("../media/desktop-screenshots/comment-section.png")}
+						src={require("../media/desktop-screenshots/weather-app.png")}
 						alt=""
 					/>
 				</div>
