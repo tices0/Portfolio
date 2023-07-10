@@ -394,6 +394,9 @@ body {
 	@include flexCenter(column);
 }
 
+// Slideshow
+// =============
+
 .slide-container {
 	width: 100%;
 	overflow-x: hidden;
@@ -482,6 +485,157 @@ body {
 @media only screen and (max-width: 930px) {
 	.slide {
 		height: calc(100vh - 15rem);
+	}
+}
+
+// Mobile
+// =============
+
+.mobile-projects {
+	@include flexCenter(column);
+	padding: 3rem;
+
+	.project {
+		@include flexCenter(column);
+		margin-bottom: 2rem;
+	}
+
+	.img-container {
+		width: 400px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	.tech-used {
+		@include flexCenter(row);
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+		width: calc(100vw - 6rem);
+
+		h1 {
+			margin-bottom: 1rem;
+		}
+
+		.tech {
+			border: 2px solid #fff;
+			color: #fff;
+			padding: 0.5rem 1rem;
+			border-radius: 10px;
+			font-size: 15px;
+
+			&:hover {
+				border-color: $light-red;
+				background-color: $light-red;
+				// color: $light-red;
+				cursor: default;
+			}
+		}
+	}
+
+	.top {
+		@include flexCenter(row);
+		gap: 2rem;
+	}
+
+	.project-info {
+		position: static;
+		transform: none;
+		margin: 1rem;
+	}
+
+	p {
+		text-align: center;
+		margin-top: 1rem;
+		width: calc(100vw - 6rem);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.mobile-projects .img-container {
+		width: 350px;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.mobile-projects {
+		.tech-used .tech {
+			font-size: 14px;
+		}
+		.project-info {
+			@include flexCenter(column);
+			gap: 1rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.mobile-projects {
+		.img-container {
+			width: 500px;
+		}
+		.top {
+			flex-direction: column;
+			gap: 1rem;
+		}
+		.project-info {
+			flex-direction: row;
+			margin: 0;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.mobile-projects .img-container {
+		width: 400px;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.mobile-projects .img-container {
+		width: 300px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.mobile-projects .img-container {
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.mobile-projects {
+		.img-container {
+			width: 200px;
+		}
+		.project-info .link {
+			border-radius: 50%;
+			font-size: 16px;
+			width: 2.5rem;
+			height: 2.5rem;
+			text-align: center;
+			position: relative;
+
+			i {
+				padding: 0;
+				@include absoluteCenter();
+			}
+		}
+		.tech-used,
+		p {
+			width: calc(100vw - 4rem);
+		}
+	}
+}
+
+@media only screen and (max-width: 250px) {
+	.mobile-projects .img-container {
+		width: 150px;
 	}
 }
 

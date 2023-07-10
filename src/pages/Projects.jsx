@@ -24,40 +24,45 @@ function Projects() {
 	return (
 		<main className="pages" id="projects-page">
 			{showSlideshow ? (
-				<Slideshow
-					setProject={setProject}
-					project={project}
-					showInfo={showInfo}
-				/>
+				<>
+					<Slideshow
+						setProject={setProject}
+						project={project}
+						showInfo={showInfo}
+					/>
+					<nav className="project-info">
+						<div className="link">
+							<a
+								href={projectLinks[project].live}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<i className="fa-solid fa-globe"></i>
+								Live
+							</a>
+						</div>
+						<div className="link">
+							<a
+								href={projectLinks[project].code}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<i className="fa-solid fa-code"></i>
+								Source Code
+							</a>
+						</div>
+						<div
+							className="link"
+							onClick={() => setShowInfo(old => !old)}
+						>
+							<i className="fa-solid fa-info"></i>
+							Info
+						</div>
+					</nav>
+				</>
 			) : (
 				<MobileProjects />
 			)}
-			<nav className="project-info">
-				<div className="link">
-					<a
-						href={projectLinks[project].live}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<i className="fa-solid fa-house"></i>
-						Live
-					</a>
-				</div>
-				<div className="link">
-					<a
-						href={projectLinks[project].code}
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<i className="fa-solid fa-code"></i>
-						Source Code
-					</a>
-				</div>
-				<div className="link" onClick={() => setShowInfo(old => !old)}>
-					<i className="fa-solid fa-info"></i>
-					Info
-				</div>
-			</nav>
 		</main>
 	);
 }
