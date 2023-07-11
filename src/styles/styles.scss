@@ -388,7 +388,7 @@ body {
 #projects-page {
 	@include flexCenter(column);
 
-	.tech-used {
+	.desktop-view .tech-used {
 		position: absolute;
 		top: 0;
 		left: 50%;
@@ -525,10 +525,15 @@ body {
 		gap: 2rem;
 	}
 
+	// .desktop-view .project-info {
+	// 	position: static;
+	// 	transform: none;
+	// 	margin: 1rem;
+	// }
+
 	.project-info {
 		position: static;
 		transform: none;
-		margin: 1rem;
 	}
 }
 

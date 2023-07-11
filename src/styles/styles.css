@@ -323,7 +323,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-#projects-page .tech-used {
+#projects-page .desktop-view .tech-used {
   position: absolute;
   top: 0;
   left: 50%;
@@ -458,7 +458,6 @@ body {
 .mobile-projects .project-info {
   position: static;
   transform: none;
-  margin: 1rem;
 }
 
 .tech-used {

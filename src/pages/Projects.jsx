@@ -24,13 +24,15 @@ function Projects() {
 		<main className="pages" id="projects-page">
 			{showSlideshow ? (
 				<>
-					<ul className="tech-used">
-						{projectLinks[project].tech.map((value, index) => (
-							<li key={index} className="tech">
-								{value}
-							</li>
-						))}
-					</ul>
+					<div className="desktop-view">
+						<ul className="tech-used">
+							{projectLinks[project].tech.map((value, index) => (
+								<li key={index} className="tech">
+									{value}
+								</li>
+							))}
+						</ul>
+					</div>
 					<Slideshow setProject={setProject} project={project} />
 					<nav className="project-info">
 						{projectLinks[project].live ? (
