@@ -48,7 +48,7 @@ function About() {
 				</p>
 				<a
 					className="cv-link"
-					href="/"
+					href={require("../media/CV.pdf")}
 					target="_blank"
 					rel="noopener noreferrer"
 				>
