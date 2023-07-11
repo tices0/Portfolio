@@ -31,8 +31,6 @@ export const projectLinks = [
 	{
 		title: "Email Server",
 		tech: ["Django", "Python", "Javascript", "Bootstrap", "CRUD"],
-		info: 'Use "example1@email.com" and "example2@email.com" (password is "password" for both) to log in for a quick demo',
-		live: "https://github-jobs-f3d40.web.app/",
 		code: "https://github.com/tochidavids/Email-Server",
 		image: "email-server.png",
 	},

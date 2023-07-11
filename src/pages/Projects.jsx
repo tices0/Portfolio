@@ -33,16 +33,20 @@ function Projects() {
 					</ul>
 					<Slideshow setProject={setProject} project={project} />
 					<nav className="project-info">
-						<div className="link">
-							<a
-								href={projectLinks[project].live}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<i className="fa-solid fa-globe"></i>
-								Live
-							</a>
-						</div>
+						{projectLinks[project].live ? (
+							<div className="link">
+								<a
+									href={projectLinks[project].live}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<i className="fa-solid fa-globe"></i>
+									Live
+								</a>
+							</div>
+						) : (
+							""
+						)}
 						<div className="link">
 							<a
 								href={projectLinks[project].code}

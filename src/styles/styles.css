@@ -465,11 +465,6 @@ body {
   transform: none;
   margin: 1rem;
 }
-.mobile-projects p {
-  text-align: center;
-  margin-top: 1rem;
-  width: calc(100vw - 6rem);
-}
 
 .tech-used {
   display: flex;
@@ -562,8 +557,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .mobile-projects .tech-used,
-  .mobile-projects p {
+  .mobile-projects .tech-used {
     width: calc(100vw - 4rem);
   }
 }

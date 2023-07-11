@@ -46,7 +46,6 @@ function MobileProjects() {
 							</li>
 						))}
 					</ul>
-					<p>{value.info || ""}</p>
 				</li>
 			))}
 		</ul>

@@ -535,12 +535,6 @@ body {
 		transform: none;
 		margin: 1rem;
 	}
-
-	p {
-		text-align: center;
-		margin-top: 1rem;
-		width: calc(100vw - 6rem);
-	}
 }
 
 .tech-used {
@@ -641,8 +635,7 @@ body {
 				@include absoluteCenter();
 			}
 		}
-		.tech-used,
-		p {
+		.tech-used {
 			width: calc(100vw - 4rem);
 		}
 	}
