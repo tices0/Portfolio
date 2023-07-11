@@ -246,12 +246,7 @@ body {
     width: 175px;
   }
   #home-page section.info ul.right li::after {
-    right: unset;
-    top: -2px;
-    left: 0;
-    width: 1.5rem;
-    height: 2px;
-    animation: lineMovementMobile 10s infinite;
+    display: none;
   }
   #home-page section.info ul.left {
     gap: 0;
