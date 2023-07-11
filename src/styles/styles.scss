@@ -115,7 +115,6 @@ body {
 		width: 100vw;
 		height: 100vh;
 		padding: 6rem;
-		// padding-left: 8rem;
 		@include flexCenter(row);
 		justify-content: space-between;
 		z-index: -1;
@@ -262,8 +261,6 @@ body {
 			font-size: 35px;
 			transform: none;
 			width: 500px;
-			// top: unset;
-			// left: unset;
 		}
 
 		section.info {
@@ -525,12 +522,6 @@ body {
 		gap: 2rem;
 	}
 
-	// .desktop-view .project-info {
-	// 	position: static;
-	// 	transform: none;
-	// 	margin: 1rem;
-	// }
-
 	.project-info {
 		position: static;
 		transform: none;
@@ -558,7 +549,6 @@ body {
 		&:hover {
 			border-color: $light-red;
 			background-color: $light-red;
-			// color: $light-red;
 			cursor: default;
 		}
 	}
@@ -884,10 +874,6 @@ body {
 				animation: fillUp 3s forwards;
 			}
 
-			// &:hover {
-			// 	color: $beige;
-			// }
-
 			i {
 				margin-right: 0.5rem;
 				font-size: 30px;
@@ -901,11 +887,9 @@ body {
 		gap: 1rem;
 		padding: 3rem 4rem;
 		border-radius: 20px;
-		// width: 400px;
 
 		h1 {
 			font-size: 30px;
-			// color: $beige;
 		}
 
 		input,
