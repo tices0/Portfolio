@@ -63,5 +63,5 @@ $ npm start
 ## Contact
 
 -   [Portfolio Website](https://tochidavids.netlify.app)
--   GitHub - [@tices0](https://github.com/tochidavids)
+-   GitHub [@tices0](https://github.com/tochidavids)
 -   Email - tochidavids18@gmail.com
