@@ -5,7 +5,6 @@ import { projectLinks } from "..";
 
 function Projects() {
 	const [project, setProject] = useState(0);
-	const [showInfo, setShowInfo] = useState(false);
 	const [showSlideshow, setShowSlideshow] = useState();
 
 	useEffect(() => {
@@ -25,11 +24,14 @@ function Projects() {
 		<main className="pages" id="projects-page">
 			{showSlideshow ? (
 				<>
-					<Slideshow
-						setProject={setProject}
-						project={project}
-						showInfo={showInfo}
-					/>
+					<ul className="tech-used">
+						{projectLinks[project].tech.map((value, index) => (
+							<li key={index} className="tech">
+								{value}
+							</li>
+						))}
+					</ul>
+					<Slideshow setProject={setProject} project={project} />
 					<nav className="project-info">
 						<div className="link">
 							<a
@@ -50,13 +52,6 @@ function Projects() {
 								<i className="fa-solid fa-code"></i>
 								Source Code
 							</a>
-						</div>
-						<div
-							className="link"
-							onClick={() => setShowInfo(old => !old)}
-						>
-							<i className="fa-solid fa-info"></i>
-							Info
 						</div>
 					</nav>
 				</>

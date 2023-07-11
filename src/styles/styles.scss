@@ -392,6 +392,13 @@ body {
 
 #projects-page {
 	@include flexCenter(column);
+
+	.tech-used {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%);
+	}
 }
 
 // Slideshow
@@ -439,11 +446,19 @@ body {
 	min-width: 100vw;
 	height: calc(100vh - 10rem);
 	@include flexCenter(row);
+	position: relative;
 
 	img {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+	}
+
+	.project-title {
+		@include absoluteCenter();
+		background-color: $black;
+		opacity: 0.65;
+		padding: 1rem;
 	}
 }
 
@@ -510,33 +525,6 @@ body {
 		}
 	}
 
-	.tech-used {
-		@include flexCenter(row);
-		gap: 1rem;
-		flex-wrap: wrap;
-		margin-top: 1rem;
-		width: calc(100vw - 6rem);
-
-		h1 {
-			margin-bottom: 1rem;
-		}
-
-		.tech {
-			border: 2px solid #fff;
-			color: #fff;
-			padding: 0.5rem 1rem;
-			border-radius: 10px;
-			font-size: 15px;
-
-			&:hover {
-				border-color: $light-red;
-				background-color: $light-red;
-				// color: $light-red;
-				cursor: default;
-			}
-		}
-	}
-
 	.top {
 		@include flexCenter(row);
 		gap: 2rem;
@@ -552,6 +540,33 @@ body {
 		text-align: center;
 		margin-top: 1rem;
 		width: calc(100vw - 6rem);
+	}
+}
+
+.tech-used {
+	@include flexCenter(row);
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+	width: calc(100vw - 6rem);
+
+	h1 {
+		margin-bottom: 1rem;
+	}
+
+	.tech {
+		border: 2px solid #fff;
+		color: #fff;
+		padding: 0.5rem 1rem;
+		border-radius: 10px;
+		font-size: 15px;
+
+		&:hover {
+			border-color: $light-red;
+			background-color: $light-red;
+			// color: $light-red;
+			cursor: default;
+		}
 	}
 }
 

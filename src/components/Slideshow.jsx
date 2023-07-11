@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { projectLinks } from "..";
 
-function Slideshow({ setProject, project, showInfo }) {
+function Slideshow({ setProject, project }) {
 	const slidesRef = useRef([]);
 	const slideContainer = useRef();
 
@@ -68,25 +68,6 @@ function Slideshow({ setProject, project, showInfo }) {
 				ref={slideContainer}
 				onTransitionEnd={transitionEnd}
 			>
-				{showInfo ? (
-					<div className="info">
-						<h1>{projectLinks[project].title}</h1>
-						<ul>
-							{projectLinks[project].tech.map((value, index) => (
-								<li className="project-tech" key={index}>
-									{value}
-								</li>
-							))}
-						</ul>
-						{projectLinks[project].info ? (
-							<p>{projectLinks[project].info}</p>
-						) : (
-							""
-						)}
-					</div>
-				) : (
-					""
-				)}
 				<div
 					className="slide"
 					id="lastClone"
@@ -105,6 +86,7 @@ function Slideshow({ setProject, project, showInfo }) {
 							src={require(`../media/${project.image}`)}
 							alt=""
 						/>
+						<h1 className="project-title">{project.title}</h1>
 					</div>
 				))}
 				{/* END OF MAIN */}
